@@ -1,0 +1,10 @@
+.idea/
+.code/
+site/
+venv/
+pyvenv.cfg
+*.pyc
+.env
+.coverage
+.pytest_cache
+coverage.xml

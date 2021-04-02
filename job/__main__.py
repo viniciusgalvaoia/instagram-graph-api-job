@@ -14,8 +14,6 @@ from datetime import datetime
 import awswrangler as wr
 import boto3
 import pandas as pd
-import vault
-from pdretry import retry
 from rich.logging import RichHandler
 from rich.traceback import install
 
@@ -32,12 +30,7 @@ logger = logging.getLogger("main")
 
 
 if __name__ == "__main__":
-    config = vault.get_environment_data("data-api")
-    bucket_full_path = os.environ.get("BUCKET_FULL_PATH", "")
-    date_str = os.environ.get("DATE", "")
-
     # logging info
-    logger.info(f"target_folder: {bucket_full_path}")
-    logger.info(f"date: {date_str}")
+    logger.info(f"date: ")
 
     logger.info("END OF JOB")
